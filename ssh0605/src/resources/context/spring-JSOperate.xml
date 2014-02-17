@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd"
+	default-lazy-init="false" default-autowire="byName">
+	
+	<!-- login Dao -->
+	<bean id="JSOperateDao" class="com.ru.ssh.JSOperate.dao.imp.JSOperateDaoImp"></bean>
+	<!-- login Service -->
+	<bean id="JSOperateServ" class="com.ru.ssh.JSOperate.service.imp.JSOperateServImp">
+		<property name="JSOperateDao">
+			<ref bean="JSOperateDao"/>
+		</property>
+	</bean>
+	<!-- login Action scope="prototype"-->
+	<bean id="JSOperateAction" class="com.ru.ssh.JSOperate.action.JSOperateAction">
+		<property name="JSOperateService">
+			<ref bean="JSOperateServ"/>
+		</property>
+	</bean>
+
+    <!--分页action-->
+    <bean id="PageExamAction" class="com.ru.ssh.JSOperate.action.PageExamAction">
+        <property name="jsOperateService">
+            <ref bean="JSOperateServ"/>
+        </property>
+    </bean>
+</beans>

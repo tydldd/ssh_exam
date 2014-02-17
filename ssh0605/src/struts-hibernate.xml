@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="hibernate" namespace="" extends="json-default">
+		<action name="*_hibernate" class="hibernateAction" method="{1}">
+			<result type="json" name="sucess">
+				<param name="includeProperties">message</param>
+			</result>
+			<result name="personlist">jsp/hibernate/connectless_n-1.jsp</result>
+			<result name="addressPersonList">jsp/hibernate/connectless1-n.jsp</result>
+			<result name="secondCache">jsp/hibernate/cache.jsp</result>
+			<result name="lazyTest">jsp/hibernate/lazytest.jsp</result>
+			<result name="alertPage">jsp/inputalert/message.jsp</result>
+			<result name="error">jsp/error/error.jsp</result>	
+		</action>
+	</package>
+</struts>

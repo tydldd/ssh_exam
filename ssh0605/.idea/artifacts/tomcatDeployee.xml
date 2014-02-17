@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="tomcatDeployee">
+    <output-path>$PROJECT_DIR$/out/artifacts/tomcatDeployee</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="ssh0605" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$APPLICATION_HOME_DIR$/lib/junit-4.10.jar" />
+          <element id="library" level="project" name="lib" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="ssh0605/web/Web" />
+    </root>
+  </artifact>
+</component>

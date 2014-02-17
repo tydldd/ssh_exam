@@ -1,0 +1,58 @@
+一、普通jar文件
+
+1、创建jar文件（jar cvf keybordinput.jar keybordinput）
+D:\ProgramFiles\Java\jdk1.6.0_38\bin>jar cvf keybordinput.jar keybordinput
+
+标明清单(manifest)
+增加：keybordinput/(读入= 0) (写出= 0)(存储了 0%)
+增加：keybordinput/BufferedReaderTest.class(读入= 1158) (写出= 661)(压缩了
+增加：keybordinput/ScannerTest.class(读入= 1841) (写出= 1020)(压缩了 44%)
+
+注：keybordinput.jar是要生成的文件，keybordinput是文件夹，可以是一个完整的文件夹路径
+
+2、查看jar文件(jar tvf keybordinput.jar)
+D:\ProgramFiles\Java\jdk1.6.0_38\bin>jar tvf keybordinput.jar
+     0 Sun Oct 06 17:56:34 CST 2013 META-INF/
+    74 Sun Oct 06 17:56:34 CST 2013 META-INF/MANIFEST.MF
+     0 Sun Oct 06 17:56:04 CST 2013 keybordinput/
+  1158 Sun Oct 06 16:10:32 CST 2013 keybordinput/BufferedReaderTest.class
+  1841 Sun Oct 06 12:21:38 CST 2013 keybordinput/ScannerTest.class
+
+3、解压jar文件（jar xvf keybordinput.jar）
+D:\ProgramFiles\Java\jdk1.6.0_38\bin>jar xvf keybordinput.jar
+  创建：META-INF/
+  解压 META-INF/MANIFEST.MF
+  创建：keybordinput/
+  解压 keybordinput/BufferedReaderTest.class
+  解压 keybordinput/ScannerTest.class
+  
+ 注：在当前目录下解压成META-INF/和keybordinput/两个文件夹
+ 
+4、更新jar文件，将其他class文件放入jar或更新里面的jar文件（jar uvf keybordinput.jar QueryTest.class）
+ 
+D:\ProgramFiles\Java\jdk1.6.0_38\bin>jar uvf keybordinput.jar QueryTest.class
+增加：QueryTest.class(读入= 5149) (写出= 2531)(压缩了 50%)
+
+注：这样QueryTest.class会和META-INF与keybordinput在同一级目录
+
+二、创建可执行jar文件（也普通jar的区别是： META-INF/MANIFEST.MF文件中多了一行：Main-Class: com.ru.javaExam.test.Test这告诉
+javaw从哪里开始执行，即主类是Test）
+
+1、使用记事本编辑一个文件文件，里面内容如下：
+Main-Class: com.ru.javaExam.test.Test
+
+注：com.ru.javaExam.test.Test前面必须有一个空格，后面必须有一个回车
+
+2、创建可执行jar文件（jar cvfm test.jar a.txt test）
+D:\ProgramFiles\Java\jdk1.6.0_38\bin>jar cvfm test.jar a.txt com
+标明清单(manifest)
+增加：test/(读入= 0) (写出= 0)(存储了 0%)
+增加：test/JunitTest.class(读入= 2033) (写出= 1188)(压缩了 41%)
+增加：test/ReturnString.class(读入= 407) (写出= 266)(压缩了 34%)
+增加：test/Test.class(读入= 736) (写出= 458)(压缩了 37%)
+
+注：m用来读取a.txt文件中的键值对,com就是test的最外层目录
+
+3、执行jar文件
+（1）第一种：java -jar test.jar
+（2）第二种：javaw test.jar

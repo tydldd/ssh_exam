@@ -92,5 +92,9 @@ public class TestAction extends ActionSupport {
 		String rootPath = TestAction.class.getResource("/").getPath();//得到calsses的路径
 		String path3=rootPath+"com/ru/util/test.properties";
 		System.out.println(path3);
+		/**
+		 * 也可以得到类路径
+		 */
+		String classPath = getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
 	}
 }

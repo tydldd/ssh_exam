@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<configuration status="error">  
+  <appenders>  
+    <Console name="Console" target="SYSTEM_OUT">  
+      <ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY"/>  
+      <PatternLayout pattern="%d %class{36} %L %M - %msg%xEx%n"/>  
+    </Console>  
+    <File name="fileLog" fileName="logs/file.log" append="true">  
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>  
+    </File>  
+    <RollingFile name="RollingFile" fileName="logs/rollingFile.log"  
+                 filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">  
+      <PatternLayout pattern="%d{yyyy.MM.dd 'at' HH:mm:ss z} %-5level %class{36} %L %M - %msg%xEx%n"/>  
+      <SizeBasedTriggeringPolicy size="50 MB" />  
+    </RollingFile>  
+  </appenders>  
+  <loggers>
+  	<!-- root标签为log的默认输出形式，如果一个类的log没有在loggers中明确指定其输出lever与格式，
+  		那么就会采用root中定义的格式 -->
+  	<!-- root用于定义打印日志的level和所采用的appender，这里打印trace及以上等级日志，
+  		会在RollingFile，Console和fileLog三种适配器中打印日志 -->  
+    <root level="trace">  
+      <appender-ref ref="RollingFile"/>  
+      <appender-ref ref="Console"/>
+      <appender-ref ref="fileLog"/>  
+    </root>  
+  </loggers>  
+</configuration> 

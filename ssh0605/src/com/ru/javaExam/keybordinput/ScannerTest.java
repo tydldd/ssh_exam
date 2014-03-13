@@ -40,7 +40,8 @@ public class ScannerTest {
 		//使用回车作为分隔符
 		//sc.useDelimiter("\n");
 		
-		//使用next()方法可以输入字符串和数字(有一个next()就可以得到一个输入值,这里可以得到两个输入值，也只允许键盘输入两个值)
+		//使用next()方法可以输入字符串和数字(有一个next()就可以得到一个输入值,这里可以得到两个输入值，
+		//也只允许键盘输入两个值)
 		if(sc.hasNext()){
 			System.out.println("输入的是（1）：" + sc.next());
 		}

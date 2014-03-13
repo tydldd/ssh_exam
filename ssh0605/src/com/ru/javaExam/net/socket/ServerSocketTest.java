@@ -19,7 +19,7 @@ import java.net.Socket;
  */
 public class ServerSocketTest {
 	@SuppressWarnings("unused")
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		ServerSocket socket = null;
 		Socket resScoket = null;
 		PrintStream ps = null;
@@ -34,6 +34,7 @@ public class ServerSocketTest {
 				System.out.println("接受客户端连接");
 				ps = new PrintStream(resScoket.getOutputStream());
 				ps.print("连接服务器成功..OK");
+				System.out.println("socket是否连接：" + resScoket.isConnected());
 				if (ps != null) {
 					ps.close();
 				}else if(resScoket != null){

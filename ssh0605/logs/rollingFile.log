@@ -1,0 +1,95 @@
+2014.03.12 at 11:43:51 CST DEBUG com.ru.javaExam.net.socket.chatroom.ChatServer 30 main - 2222fefe2
+2014.03.12 at 11:50:44 CST DEBUG com.ru.javaExam.net.socket.chatroom.ChatServer 30 main - 2222fefe2
+2014.03.12 at 11:51:05 CST DEBUG com.ru.javaExam.net.socket.chatroom.ChatServer 30 main - 2222fefe2
+2014.03.12 at 11:53:53 CST DEBUG com.ru.javaExam.net.socket.chatroom.ChatServer 30 main - 创建serverSocket
+2014.03.12 at 11:54:25 CST DEBUG com.ru.javaExam.net.socket.chatroom.ChatServer 30 main - 创建serverSocket
+2014.03.12 at 11:54:46 CST DEBUG com.ru.javaExam.net.socket.chatroom.ChatServer 30 main - 创建serverSocket
+2014.03.12 at 11:55:35 CST DEBUG com.ru.javaExam.net.socket.chatroom.ChatServer 30 main - 创建serverSocket
+2014.03.13 at 11:32:16 CST DEBUG com.ru.javaExam.net.socket.chatroom.ChatServer 37 main - 创建serverSocket
+2014.03.13 at 11:44:10 CST DEBUG com.ru.javaExam.net.socket.chatroom.ChatServer 37 main - 创建serverSocket
+2014.03.13 at 11:44:26 CST DEBUG com.ru.javaExam.net.socket.chatroom.ChatServer 47 main - 接收到客户端连接....
+2014.03.13 at 11:44:26 CST DEBUG com.ru.javaExam.net.socket.chatroom.ChatServer 50 main - 服务器生成socket与客户端建立连接
+2014.03.13 at 11:44:27 CST ERROR com.ru.javaExam.net.socket.chatroom.clientThread 73 run - 客户端接收信息失败 java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:168) ~[?:1.6.0_38-ea]
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:264) ~[?:1.6.0_38-ea]
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:306) ~[?:1.6.0_38-ea]
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:158) ~[?:1.6.0_38-ea]
+	at java.io.InputStreamReader.read(InputStreamReader.java:167) ~[?:1.6.0_38-ea]
+	at java.io.BufferedReader.fill(BufferedReader.java:136) ~[?:1.6.0_38-ea]
+	at java.io.BufferedReader.readLine(BufferedReader.java:299) ~[?:1.6.0_38-ea]
+	at java.io.BufferedReader.readLine(BufferedReader.java:362) ~[?:1.6.0_38-ea]
+	at com.ru.javaExam.net.socket.chatroom.clientThread.run(Client.java:69) [classes/:?]
+	at java.lang.Thread.run(Thread.java:662) [?:1.6.0_38-ea]
+
+2014.03.13 at 14:18:26 CST ERROR com.ru.javaExam.net.socket.chatroom.clientThread 74 run - 客户端接收信息失败 java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:168) ~[?:1.6.0_38-ea]
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:264) ~[?:1.6.0_38-ea]
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:306) ~[?:1.6.0_38-ea]
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:158) ~[?:1.6.0_38-ea]
+	at java.io.InputStreamReader.read(InputStreamReader.java:167) ~[?:1.6.0_38-ea]
+	at java.io.BufferedReader.fill(BufferedReader.java:136) ~[?:1.6.0_38-ea]
+	at java.io.BufferedReader.readLine(BufferedReader.java:299) ~[?:1.6.0_38-ea]
+	at java.io.BufferedReader.readLine(BufferedReader.java:362) ~[?:1.6.0_38-ea]
+	at com.ru.javaExam.net.socket.chatroom.clientThread.run(Client.java:69) [classes/:?]
+	at java.lang.Thread.run(Thread.java:662) [?:1.6.0_38-ea]
+
+2014.03.13 at 14:22:00 CST ERROR com.ru.javaExam.net.socket.chatroom.clientThread 74 run - 客户端接收信息失败 java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:168) ~[?:1.6.0_38-ea]
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:264) ~[?:1.6.0_38-ea]
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:306) ~[?:1.6.0_38-ea]
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:158) ~[?:1.6.0_38-ea]
+	at java.io.InputStreamReader.read(InputStreamReader.java:167) ~[?:1.6.0_38-ea]
+	at java.io.BufferedReader.fill(BufferedReader.java:136) ~[?:1.6.0_38-ea]
+	at java.io.BufferedReader.readLine(BufferedReader.java:299) ~[?:1.6.0_38-ea]
+	at java.io.BufferedReader.readLine(BufferedReader.java:362) ~[?:1.6.0_38-ea]
+	at com.ru.javaExam.net.socket.chatroom.clientThread.run(Client.java:69) [classes/:?]
+	at java.lang.Thread.run(Thread.java:662) [?:1.6.0_38-ea]
+
+2014.03.13 at 14:25:35 CST ERROR com.ru.javaExam.net.socket.chatroom.clientThread 74 run - 客户端接收信息失败 java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:168) ~[?:1.6.0_38-ea]
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:264) ~[?:1.6.0_38-ea]
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:306) ~[?:1.6.0_38-ea]
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:158) ~[?:1.6.0_38-ea]
+	at java.io.InputStreamReader.read(InputStreamReader.java:167) ~[?:1.6.0_38-ea]
+	at java.io.BufferedReader.fill(BufferedReader.java:136) ~[?:1.6.0_38-ea]
+	at java.io.BufferedReader.readLine(BufferedReader.java:299) ~[?:1.6.0_38-ea]
+	at java.io.BufferedReader.readLine(BufferedReader.java:362) ~[?:1.6.0_38-ea]
+	at com.ru.javaExam.net.socket.chatroom.clientThread.run(Client.java:69) [classes/:?]
+	at java.lang.Thread.run(Thread.java:662) [?:1.6.0_38-ea]
+
+2014.03.13 at 14:26:53 CST ERROR com.ru.javaExam.net.socket.chatroom.clientThread 74 run - 客户端接收信息失败 java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:168) ~[?:1.6.0_38-ea]
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:264) ~[?:1.6.0_38-ea]
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:306) ~[?:1.6.0_38-ea]
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:158) ~[?:1.6.0_38-ea]
+	at java.io.InputStreamReader.read(InputStreamReader.java:167) ~[?:1.6.0_38-ea]
+	at java.io.BufferedReader.fill(BufferedReader.java:136) ~[?:1.6.0_38-ea]
+	at java.io.BufferedReader.readLine(BufferedReader.java:299) ~[?:1.6.0_38-ea]
+	at java.io.BufferedReader.readLine(BufferedReader.java:362) ~[?:1.6.0_38-ea]
+	at com.ru.javaExam.net.socket.chatroom.clientThread.run(Client.java:69) [classes/:?]
+	at java.lang.Thread.run(Thread.java:662) [?:1.6.0_38-ea]
+
+2014.03.13 at 14:28:28 CST ERROR com.ru.javaExam.net.socket.chatroom.clientThread 74 run - 客户端接收信息失败 java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:168) ~[?:1.6.0_38-ea]
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:264) ~[?:1.6.0_38-ea]
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:306) ~[?:1.6.0_38-ea]
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:158) ~[?:1.6.0_38-ea]
+	at java.io.InputStreamReader.read(InputStreamReader.java:167) ~[?:1.6.0_38-ea]
+	at java.io.BufferedReader.fill(BufferedReader.java:136) ~[?:1.6.0_38-ea]
+	at java.io.BufferedReader.readLine(BufferedReader.java:299) ~[?:1.6.0_38-ea]
+	at java.io.BufferedReader.readLine(BufferedReader.java:362) ~[?:1.6.0_38-ea]
+	at com.ru.javaExam.net.socket.chatroom.clientThread.run(Client.java:69) [classes/:?]
+	at java.lang.Thread.run(Thread.java:662) [?:1.6.0_38-ea]
+
+2014.03.13 at 14:36:16 CST ERROR com.ru.javaExam.net.socket.chatroom.clientThread 74 run - 客户端接收信息失败 java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:168) ~[?:1.6.0_38-ea]
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:264) ~[?:1.6.0_38-ea]
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:306) ~[?:1.6.0_38-ea]
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:158) ~[?:1.6.0_38-ea]
+	at java.io.InputStreamReader.read(InputStreamReader.java:167) ~[?:1.6.0_38-ea]
+	at java.io.BufferedReader.fill(BufferedReader.java:136) ~[?:1.6.0_38-ea]
+	at java.io.BufferedReader.readLine(BufferedReader.java:299) ~[?:1.6.0_38-ea]
+	at java.io.BufferedReader.readLine(BufferedReader.java:362) ~[?:1.6.0_38-ea]
+	at com.ru.javaExam.net.socket.chatroom.clientThread.run(Client.java:69) [classes/:?]
+	at java.lang.Thread.run(Thread.java:662) [?:1.6.0_38-ea]
+

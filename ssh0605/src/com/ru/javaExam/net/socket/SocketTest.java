@@ -27,6 +27,7 @@ public class SocketTest {
 		FileWriter fw = null;
 		try {
 			socket = new Socket("127.0.0.1", 12345);
+			socket.setSoTimeout(5000);
 			br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 			
 			String con = null;
@@ -35,11 +36,11 @@ public class SocketTest {
 				sb.append(con);
 			}
 			System.out.println("客户端得到的反馈信息：" + sb.toString());
-			fw = new FileWriter("H:/test/socket2.txt");
-			fw.write(sb.toString());
-			fw.close();
+//			fw = new FileWriter("H:/test/socket2.txt");
+//			fw.write(sb.toString());
+//			fw.close();
 			br.close();
-			socket.close();
+//			socket.close();
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

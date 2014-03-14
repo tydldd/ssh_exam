@@ -78,7 +78,7 @@ class socThread implements Runnable{
 	Socket soc = null;
 	public socThread(Socket soc) throws IOException{
 		this.soc = soc;
-		//创建服务器端socket输入流
+		//得到服务器端。注：只要socket存在，这个socket的输入输出流一直存在
 		InputStream is = soc.getInputStream();
 		br = new BufferedReader(new InputStreamReader(is));
 	}
@@ -116,7 +116,7 @@ class socThread implements Runnable{
 			return br.readLine();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.out.println("读取客户端socket的发送信息失败！客户端关闭...");
+			System.out.println("客户端关闭...");
 			//将服务器端对应的socket删除
 			ChatServer.socketList.remove(soc);
 			if(br != null){

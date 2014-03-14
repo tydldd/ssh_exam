@@ -1,4 +1,4 @@
-package com.ru.javaExam.net.socket;
+package com.ru.javaExam.net.socket.sockettest;
 
 import java.io.IOException;
 import java.io.PrintStream;

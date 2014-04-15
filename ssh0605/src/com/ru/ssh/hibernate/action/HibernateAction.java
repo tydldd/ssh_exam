@@ -47,7 +47,7 @@ public class HibernateAction extends ActionSupport{
 			return "sucess";
 		}
 		message = "0";
-		return "sucess";
+		return "success";
 	}
 	
 	

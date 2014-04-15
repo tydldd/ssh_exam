@@ -7,6 +7,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.baseBrowserLibrary"/>
-	<classpathentry kind="src" path="WebRoot"/>
+	<classpathentry excluding="js/jquery1.10.2.js|js/jquery_dialog.js" kind="src" path="WebRoot"/>
 	<classpathentry kind="output" path=""/>
 </classpath>

@@ -5,7 +5,7 @@
 <struts>
 	<package name="hibernate" namespace="" extends="json-default">
 		<action name="*_hibernate" class="hibernateAction" method="{1}">
-			<result type="json" name="sucess">
+			<result type="json" name="success">
 				<param name="includeProperties">message</param>
 			</result>
 			<result name="personlist">jsp/hibernate/connectless_n-1.jsp</result>

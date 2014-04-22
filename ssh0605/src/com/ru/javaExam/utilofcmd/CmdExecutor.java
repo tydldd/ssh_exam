@@ -87,6 +87,47 @@ public class CmdExecutor {
 
 	}
 	
+	/**
+	 * 执行外部命令并获取返回值
+	 * 
+	 * @param cmd
+	 *            外部命令
+	 * @return 外部命令执行的返回值
+	 * @throws Exception
+	 *             执行中的异常
+	 */
+	public static String cmd_result(String cmd) {
+		Runtime rt = Runtime.getRuntime();
+		String str[] = { "/bin/sh", "-c", cmd };
+		Process pcs = null;
+		BufferedReader br = null;
+		String line = new String();
+		StringBuffer buff = new StringBuffer();
+		try {
+			pcs = rt.exec(str);
+			br = new BufferedReader(new InputStreamReader(pcs.getInputStream()));
+			while ((line = br.readLine()) != null) {
+				buff.append(line).append("\n");
+			}
+			pcs.waitFor();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		} catch (InterruptedException e) {
+			System.err.println("processes was interrupted");
+		} finally {
+			try {
+				if (br != null) {
+					br.close();
+				}
+			} catch (Exception e) {
+			}
+			if (pcs != null) {
+				int ret = pcs.exitValue();
+			}
+		}
+		return buff.toString();
+	}
+	
 	public static void main(String[] args) {
 		String result = CmdExecutor.exeCmdResultUTF8("sh /topapp/topwalk/cpu.sh");
 		System.out.println("sh /topapp/topwalk/cpu.sh========================"+result);

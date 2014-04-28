@@ -20,8 +20,8 @@ public class DynamicProxy {
 	public static void main(String[] args) {
 		Hello helloImp = new HelloImp();
 		InvocationHandler helloHandler = new HelloHandler(helloImp);
-		Hello hello = (Hello) Proxy.newProxyInstance(helloImp.getClass().getClassLoader(), 
-				helloImp.getClass().getInterfaces(), helloHandler);
+		Hello hello = (Hello) Proxy.newProxyInstance(HelloImp.class.getClassLoader(), 
+				HelloImp.class.getInterfaces(), helloHandler);
 		hello.sayHello("hello!!");
 		hello.sayGoodBye("goodbye!!");
 	}
@@ -61,10 +61,12 @@ class HelloHandler implements InvocationHandler{
 		//执行方法时，做一些操作
 		System.out.println("start");
 		//执行方法实现
+//		System.out.println("proxy = " + proxy);
 		result = method.invoke(obj, args);
 		//执行完方法，做一些操作
 		System.out.println("end");
+		System.out.println("****result = " + result);
 		return result;
 	}
 	
-}
+} 

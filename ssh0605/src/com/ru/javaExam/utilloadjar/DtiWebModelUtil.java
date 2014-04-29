@@ -1,4 +1,4 @@
-package com.ru.javaExam;
+package com.ru.javaExam.utilloadjar;
 
 import java.lang.reflect.Method;
 import java.net.URL;

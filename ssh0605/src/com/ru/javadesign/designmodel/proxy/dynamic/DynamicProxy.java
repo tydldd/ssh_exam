@@ -17,9 +17,8 @@ import java.lang.reflect.Proxy;
  * @version 1.0
  */
 public class DynamicProxy {
-	public static void main(String[] args) {
-		Hello helloImp = new HelloImp();
-		InvocationHandler helloHandler = new HelloHandler(helloImp);
+	public static void main(String[] args) throws InstantiationException, IllegalAccessException {
+		InvocationHandler helloHandler = new HelloHandler(HelloImp.class.newInstance());
 		Hello hello = (Hello) Proxy.newProxyInstance(HelloImp.class.getClassLoader(), 
 				HelloImp.class.getInterfaces(), helloHandler);
 		hello.sayHello("hello!!");
@@ -51,6 +50,10 @@ class HelloImp implements Hello{
 class HelloHandler implements InvocationHandler{
 
 	private Object obj;
+	public HelloHandler(){
+		
+	}
+	
 	public HelloHandler(Object obj){
 		this.obj = obj;
 	}

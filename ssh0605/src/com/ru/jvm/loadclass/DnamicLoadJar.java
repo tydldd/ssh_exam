@@ -1,4 +1,4 @@
-package com.ru.javaExam.utilloadjar;
+package com.ru.jvm.loadclass;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -6,7 +6,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
 
-public class DynamicLoadJar {
+public class DnamicLoadJar {
 
 	/**
 	 * 动态加载jar文件(加载到classpath中)
@@ -61,7 +61,7 @@ public class DynamicLoadJar {
 	}
 	
 	public static void main(String[] args) {
-		String filePath = "file://" + DynamicLoadJar.class.getResource("/com/ru/jvm/loadclass/test.jar").
+		String filePath = "file://" + DnamicLoadJar.class.getResource("/com/ru/jvm/loadclass/test.jar").
 				getPath();
 		String classPath = "test.Test";
 		String methodName = "test";

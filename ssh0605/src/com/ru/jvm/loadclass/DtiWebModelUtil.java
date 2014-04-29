@@ -30,7 +30,7 @@ public class DtiWebModelUtil {
 			jarPath = "file:///"+jarPath;
 			System.out.println(jarPath + " == [jarPath]");
 			method.invoke(urlLoader, new URL(jarPath));
-			log.debug("系统成功动态加载jar类库："+jarPath);
+			log.debug("系统成功动态加载jar类库："+jarPath); 
 		} catch (Exception e) {
 			log.error("加载DTI构件化jar包失败！", e);
 		}

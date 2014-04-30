@@ -18,6 +18,7 @@ import java.lang.reflect.Proxy;
  */
 public class DynamicProxy {
 	public static void main(String[] args) throws InstantiationException, IllegalAccessException {
+		//调用处理方法对象（HelloImp.class.newInstance():通过反射机制创建HelloImp对象）
 		InvocationHandler helloHandler = new HelloHandler(HelloImp.class.newInstance());
 		Hello hello = (Hello) Proxy.newProxyInstance(HelloImp.class.getClassLoader(), 
 				HelloImp.class.getInterfaces(), helloHandler);

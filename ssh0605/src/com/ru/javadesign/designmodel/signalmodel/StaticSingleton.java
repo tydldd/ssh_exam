@@ -21,6 +21,7 @@ public class StaticSingleton {
 		private static StaticSingleton ss = new StaticSingleton();
 	}
 	
+	
 	public static StaticSingleton getInstance(){
 		return SingletonHolder.ss;
 	}

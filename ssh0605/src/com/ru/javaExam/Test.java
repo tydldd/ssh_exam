@@ -1,5 +1,7 @@
 package com.ru.javaExam;
 
+import java.util.HashSet;
+
 /**
  * 
  * 项目名称：ssh0605
@@ -12,9 +14,31 @@ package com.ru.javaExam;
  * @since  jdk1.7
  * @version 1.0
  */
-public class Test {
-
-	public static void main(String[] args) {
-		System.out.println(5-10);
+public abstract class Test {
+	
+	public int meth(int x){
+		return x++;
 	}
+
+	final int i = 0;
+    public void doSomething() {
+        System.out.println("i = " + i);
+    }
+
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i = 0;
+		for(i=0;i<5;i++)
+		{
+			System.out.println(i);
+		}
+		//假设程序不小心多了一句--i;
+		--i;
+		assert i==5;		
+	}
+
 }

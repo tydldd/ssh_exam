@@ -25,8 +25,18 @@ import org.junit.Test;
  */
 @SuppressWarnings("serial")
 class MyNullException extends Exception{
-	public MyNullException(){super("空指针");}
-	public MyNullException(String msg){super(msg);}
+	public MyNullException(){
+		super("空指针");
+		System.out.println("111");
+	}
+	
+	public MyNullException(String msg){
+		super(msg);
+	}
+	
+	public MyNullException(String msg, Throwable cause){
+		super(msg, cause);
+	}
 }
 
 public class ExceptionExam {
@@ -64,21 +74,22 @@ public class ExceptionExam {
 		try {
 			s.length();
 		} catch (Exception e) {
-			throw new MyNullException("空指针");
+			throw new MyNullException("空指针", e);
 		}
 	}
 	
 	
-	public  static void main(String[] args){
-		try {
+	public  static void main(String[] args) throws MyNullException{
+//		try {
 			test();
-		} catch ( MyNullException e) {
+//		} catch ( MyNullException e) {
+//			System.out.println("e.getMessage=" + e.getMessage() + 
+//					"    e.getLocalizedMessage()" + e.getLocalizedMessage());
 			
-			e.printStackTrace();
-			System.out.println(e.getStackTrace());
-			System.out.println("e.getMessage=" + e.getMessage() + 
-			"    e.getLocalizedMessage()" + e.getLocalizedMessage());
+//			e.printStackTrace();
+//			System.out.println(e.getStackTrace());
 			
-		}
+			
+//		}
 	}
 }

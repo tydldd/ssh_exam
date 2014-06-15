@@ -13,10 +13,10 @@ public class ApiConnection {
 	public static void main(String[] args) {
 		String city = "beijing";//参数
 		String title = URLEncoder.encode("速度与激情6");
-		String url = "http://v.juhe.cn/movie/index?";//url为请求的api接口地址
-	    String key= "92c3996c8f7c68d2c419e1797e10e000";//申请的对应key
-		String urlAll = new StringBuffer(url).append("&title=").append(title).append("&key=").
-				append(key).toString(); 
+		String url = "http://v.juhe.cn/weather/index?cityname=苏州";//url为请求的api接口地址
+	    String key= "5531b1cdc5ad00840018dcf0387b45fe";//申请的对应key
+//		String urlAll = new StringBuffer(url).append("&key=" + key).toString(); 
+	    String urlAll = "http://api.k780.com:88/?app=weather.future&weaid=1&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json";
 		String charset ="UTF-8";
 		String jsonResult = get(urlAll, charset);//得到JSON字符串
 		

@@ -151,7 +151,7 @@ public class OperateXmlDocument {
 	
 	public static void main(String[] args) throws Exception{
 		try {
-			String filePath = "F:\\student.xml";
+			String filePath = "H:/test/stu.xml";
 			/*String root = "students";
 			List<Map<String, String>> list = new ArrayList<Map<String,String>>();
 			Map<String, String> map = new HashMap<String, String>();
